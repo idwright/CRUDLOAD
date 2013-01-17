@@ -1,0 +1,70 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>copyOfout1=>studies" expression="(row4.short_code.equals(StringHandling.EREPLACE(row3.Studies,&quot;\\(\\d*\\)&quot;,&quot;&quot;))) ? row4.short_code : &quot;null&quot; ">
+    <variables name="row3.id" value="0" talendType="id_Long"/>
+    <variables name="row3.version" value="0" talendType="id_Long"/>
+    <variables name="row3.contextid" value="null" talendType="id_String"/>
+    <variables name="row3.country" value="null" talendType="id_String"/>
+    <variables name="row3.latitude" value="0" talendType="id_Float"/>
+    <variables name="row3.longitude" value="0" talendType="id_Float"/>
+    <variables name="row3.name" value="null" talendType="id_String"/>
+    <variables name="row3.num_samples" value="0" talendType="id_Integer"/>
+    <variables name="row3.studies" value="null" talendType="id_String"/>
+    <variables name="row3.sub_cont" value="null" talendType="id_String"/>
+    <variables name="row4.id" value="0" talendType="id_Long"/>
+    <variables name="row4.version" value="0" talendType="id_Long"/>
+    <variables name="row4.description" value="null" talendType="id_String"/>
+    <variables name="row4.short_code" value="null" talendType="id_String"/>
+    <variables name="row4.title" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>out1=>studies" expression="StringHandling.EREPLACE(row2.Studies,&quot;\\(\\d*\\)&quot;,&quot;&quot;)">
+    <variables name="row2.ID" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Location1" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row2.Loc2" value="null" talendType="id_Float" nullable="true"/>
+    <variables name="row2.GeoCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.SubCont" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Count" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.Studies" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row1.id" value="0" talendType="id_Long"/>
+    <variables name="row1.version" value="0" talendType="id_Long"/>
+    <variables name="row1.description" value="null" talendType="id_String"/>
+    <variables name="row1.short_code" value="fred" talendType="id_String"/>
+    <variables name="row1.title" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>study_study_context_fk=>study_study_context_id" expression="(row4.title.startsWith(row3.studies)) ? row4.id : -1     ">
+    <variables name="row3.id" value="0" talendType="id_Long"/>
+    <variables name="row3.version" value="0" talendType="id_Long"/>
+    <variables name="row3.contextid" value="null" talendType="id_String"/>
+    <variables name="row3.country" value="null" talendType="id_String"/>
+    <variables name="row3.latitude" value="0" talendType="id_Float"/>
+    <variables name="row3.longitude" value="0" talendType="id_Float"/>
+    <variables name="row3.name" value="null" talendType="id_String"/>
+    <variables name="row3.num_samples" value="0" talendType="id_Integer"/>
+    <variables name="row3.studies" value="null" talendType="id_String"/>
+    <variables name="row3.sub_cont" value="null" talendType="id_String"/>
+    <variables name="row4.id" value="0" talendType="id_Long"/>
+    <variables name="row4.version" value="0" talendType="id_Long"/>
+    <variables name="row4.description" value="null" talendType="id_String"/>
+    <variables name="row4.short_code" value="null" talendType="id_String"/>
+    <variables name="row4.title" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>study_study_context_fk=>study_context_id" expression="(row4.title.startsWith(row3.studies)) ? row3.id : -1     ">
+    <variables name="row3.id" value="0" talendType="id_Long"/>
+    <variables name="row3.version" value="0" talendType="id_Long"/>
+    <variables name="row3.contextid" value="null" talendType="id_String"/>
+    <variables name="row3.country" value="null" talendType="id_String"/>
+    <variables name="row3.latitude" value="0" talendType="id_Float"/>
+    <variables name="row3.longitude" value="0" talendType="id_Float"/>
+    <variables name="row3.name" value="null" talendType="id_String"/>
+    <variables name="row3.num_samples" value="0" talendType="id_Integer"/>
+    <variables name="row3.studies" value="null" talendType="id_String"/>
+    <variables name="row3.sub_cont" value="null" talendType="id_String"/>
+    <variables name="row4.id" value="0" talendType="id_Long"/>
+    <variables name="row4.version" value="0" talendType="id_Long"/>
+    <variables name="row4.description" value="null" talendType="id_String"/>
+    <variables name="row4.short_code" value="null" talendType="id_String"/>
+    <variables name="row4.title" value="null" talendType="id_String"/>
+  </expression:EMFExpression>
+</xmi:XMI>

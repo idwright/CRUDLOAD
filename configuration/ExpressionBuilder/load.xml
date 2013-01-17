@@ -1,0 +1,17 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
+  <expression:EMFExpression id="null=>studyOutput=>description" expression="row3.description">
+    <variables name="row3.name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.title" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.description" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>studyOutput=>short_code" expression="row3.name">
+    <variables name="row3.name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.title" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row3.description" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>uniquePerson=>description" expression="&quot;&quot;">
+    <variables name="row4.name" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row4.email" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+</xmi:XMI>
