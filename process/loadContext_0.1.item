@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="context_RowSeparator" prompt="context_RowSeparator?" promptNeeded="false" repositoryContextId="_t44acGYmEeK_ld8Q_buO_w" type="id_String" value="&quot;\n&quot;"/>
+    <contextParameter comment="" name="context_File" prompt="context_File?" promptNeeded="false" repositoryContextId="_t44acGYmEeK_ld8Q_buO_w" type="id_File" value="/home/iwright/git/pycrud/scripts/SitesInfo.txt"/>
+    <contextParameter comment="" name="context_FieldSeparator" prompt="context_FieldSeparator?" promptNeeded="false" repositoryContextId="_t44acGYmEeK_ld8Q_buO_w" type="id_String" value="&quot;,&quot;"/>
+    <contextParameter comment="" name="context_Encoding" prompt="context_Encoding?" promptNeeded="false" repositoryContextId="_t44acGYmEeK_ld8Q_buO_w" type="id_String" value="UTF-8"/>
+    <contextParameter comment="" name="context_Header" prompt="context_Header?" promptNeeded="false" repositoryContextId="_t44acGYmEeK_ld8Q_buO_w" type="id_Integer" value="1"/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
@@ -34,14 +40,14 @@
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_yLq58F8CEeKtNtAZOQNV0Q"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;/home/iwright/git/pycrud/scripts/SitesInfo.txt&quot;"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;\t&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.context_File"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="context.context_RowSeparator"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="context.context_RowSeparator"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="context.context_FieldSeparator"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
     <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;"/>
     <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="HEADER" value="context.context_Header"/>
     <elementParameter field="TEXT" name="FOOTER" value="0"/>
     <elementParameter field="TEXT" name="LIMIT" value=""/>
     <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
@@ -59,9 +65,9 @@
     <elementParameter field="TABLE" name="TRIMSELECT">
       <elementValue elementRef="SCHEMA_COLUMN" value="ID"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Location1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Latitude"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Loc2"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Longitude"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="GeoCode"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -71,14 +77,16 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="SubCont"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Count"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Column7"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Studies"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Column8"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Column9"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
     <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="context.context_Encoding"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="CUSTOM"/>
     <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
     <elementParameter field="TEXT" name="DESTINATION" value=""/>
@@ -87,27 +95,29 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
-    <metadata connector="FLOW" label="metadata" name="tFileInputDelimited_3">
+    <metadata connector="FLOW" label="metadata1" name="tFileInputDelimited_3">
       <column comment="" key="false" length="26" name="ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
-      <column comment="" key="false" length="10" name="Location1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="8" type="id_Float"/>
-      <column comment="" key="false" length="10" name="Loc2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" type="id_Float"/>
-      <column comment="" key="false" length="44" name="GeoCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
-      <column comment="" key="false" length="177" name="Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
-      <column comment="" key="false" length="2" name="Country" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
-      <column comment="" key="false" length="3" name="SubCont" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
-      <column comment="" key="false" length="3" name="Count" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer"/>
-      <column comment="" key="false" length="51" name="Studies" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="Latitude" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="8" type="id_Float"/>
+      <column comment="" key="false" length="10" name="Longitude" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" type="id_Float"/>
+      <column comment="" key="false" length="28" name="GeoCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="93" name="Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="44" name="Country" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="96" name="SubCont" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="43" name="Column7" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="Column8" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="Column9" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
     </metadata>
-    <metadata connector="REJECT" label="metadata" name="REJECT">
+    <metadata connector="REJECT" label="metadata1" name="REJECT">
       <column comment="" key="false" length="26" name="ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
-      <column comment="" key="false" length="10" name="Location1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="8" type="id_Double"/>
-      <column comment="" key="false" length="10" name="Loc2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" type="id_Double"/>
-      <column comment="" key="false" length="44" name="GeoCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
-      <column comment="" key="false" length="177" name="Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
-      <column comment="" key="false" length="2" name="Country" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
-      <column comment="" key="false" length="3" name="SubCont" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
-      <column comment="" key="false" length="3" name="Count" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer"/>
-      <column comment="" key="false" length="51" name="Studies" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="10" name="Latitude" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="8" type="id_Double"/>
+      <column comment="" key="false" length="10" name="Longitude" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="7" type="id_Double"/>
+      <column comment="" key="false" length="28" name="GeoCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="93" name="Name" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="44" name="Country" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="96" name="SubCont" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="43" name="Column7" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="Column8" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
+      <column comment="" key="false" length="3" name="Column9" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
     </metadata>
@@ -165,23 +175,24 @@
         <mapperTableEntries name="version" type="id_Long"/>
         <mapperTableEntries name="contextid" expression="row2.ID " type="id_String"/>
         <mapperTableEntries name="country" expression="row2.Country " type="id_String"/>
-        <mapperTableEntries name="latitude" expression="row2.Location1 " type="id_Float"/>
-        <mapperTableEntries name="longitude" expression="row2.Loc2 " type="id_Float"/>
+        <mapperTableEntries name="latitude" expression="row2.Latitude " type="id_Float"/>
+        <mapperTableEntries name="longitude" expression="row2.Longitude " type="id_Float"/>
         <mapperTableEntries name="name" expression="row2.GeoCode " type="id_String"/>
-        <mapperTableEntries name="num_samples" expression="row2.Count " type="id_Integer"/>
-        <mapperTableEntries name="studies" expression="StringHandling.EREPLACE(row2.Studies,&quot;\\(\\d*\\)&quot;,&quot;&quot;) " type="id_String"/>
+        <mapperTableEntries name="num_samples" expression="" type="id_Integer"/>
+        <mapperTableEntries name="studies" expression="&quot;&quot;" type="id_String"/>
         <mapperTableEntries name="sub_cont" expression="row2.SubCont " type="id_String"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="ID" type="id_String" nullable="true"/>
-        <mapperTableEntries name="Location1" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="Loc2" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="Latitude" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="Longitude" type="id_Float" nullable="true"/>
         <mapperTableEntries name="GeoCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="Name" type="id_String" nullable="true"/>
         <mapperTableEntries name="Country" type="id_String" nullable="true"/>
         <mapperTableEntries name="SubCont" type="id_String" nullable="true"/>
-        <mapperTableEntries name="Count" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Studies" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Column7" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Column8" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Column9" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>

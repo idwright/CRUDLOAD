@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore">
-  <expression:EMFExpression id="null=>study_study_context_fk=>study_study_context_id" expression="compareStudy.checkTitle(StringHandling.EREPLACE(row3.studies,&quot;\&quot;&quot;,&quot;&quot;),row4.title) ? row4.id : -1         ">
+  <expression:EMFExpression id="null=>" expression="row4.title.startsWith(row2.Study_T) &amp;&amp; row3.contextid.equals(row2.Site_T) ? row3.id : -1       ">
     <variables name="row3.id" value="0" talendType="id_Long"/>
     <variables name="row3.version" value="0" talendType="id_Long"/>
     <variables name="row3.contextid" value="null" talendType="id_String"/>
@@ -16,8 +16,29 @@
     <variables name="row4.description" value="null" talendType="id_String"/>
     <variables name="row4.short_code" value="null" talendType="id_String"/>
     <variables name="row4.title" value="null" talendType="id_String"/>
+    <variables name="row2.Num_T" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.Sample_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Study_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Country_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.LabSample_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.LowTypability_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.PcaOutlier_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.IsDuplicate_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.ManualExlusion_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Exclude_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Fws_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.UsedInSnpDiscovery_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Location_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Year_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Region_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.KhCluster_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.SubCont_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Old_Fws_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Site_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.SiteInfoSource_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Notes_T" value="null" talendType="id_String" nullable="true"/>
   </expression:EMFExpression>
-  <expression:EMFExpression id="null=>study_study_context_fk=>study_context_id" expression="compareStudy.checkTitle(StringHandling.EREPLACE(row3.studies,&quot;\&quot;&quot;,&quot;&quot;),row4.title) ? row3.id : -1     ">
+  <expression:EMFExpression id="null=>study_study_context_fk=>study_context_id" expression="row4.title.startsWith(row5.Study) &amp;&amp; row3.contextid.equals(row5.SiteCode) ? row3.id : -1          ">
     <variables name="row3.id" value="0" talendType="id_Long"/>
     <variables name="row3.version" value="0" talendType="id_Long"/>
     <variables name="row3.contextid" value="null" talendType="id_String"/>
@@ -33,5 +54,131 @@
     <variables name="row4.description" value="null" talendType="id_String"/>
     <variables name="row4.short_code" value="null" talendType="id_String"/>
     <variables name="row4.title" value="null" talendType="id_String"/>
+    <variables name="row5.Num" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row5.Sample" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Study" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.LabSample" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.LowTypability" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.PcaOutlier" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.IsDuplicate" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.ManualExlusion" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Exclude" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Fws" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.UsedInSnpDiscovery" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Location" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Year" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Region" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.KhCluster" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.SubCont" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Old_Fws" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Site" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.SiteCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.SiteInfoSource" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Notes" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Num" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.Sample" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Study" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.LabSample" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.LowTypability" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.PcaOutlier" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.IsDuplicate" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.ManualExlusion" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Exclude" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Fws" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.UsedInSnpDiscovery" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Location" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Year" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Region" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.KhCluster" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.SubCont" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Old_Fws" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Site" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.SiteCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.SiteInfoSource" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Notes" value="null" talendType="id_String" nullable="true"/>
+  </expression:EMFExpression>
+  <expression:EMFExpression id="null=>study_study_context_fk=>study_study_context_id" expression="row4.title.startsWith(row5.Study) ? row4.id : -1            ">
+    <variables name="row3.id" value="0" talendType="id_Long"/>
+    <variables name="row3.version" value="0" talendType="id_Long"/>
+    <variables name="row3.contextid" value="null" talendType="id_String"/>
+    <variables name="row3.country" value="null" talendType="id_String"/>
+    <variables name="row3.latitude" value="0" talendType="id_Float"/>
+    <variables name="row3.longitude" value="0" talendType="id_Float"/>
+    <variables name="row3.name" value="null" talendType="id_String"/>
+    <variables name="row3.num_samples" value="0" talendType="id_Integer"/>
+    <variables name="row3.studies" value="null" talendType="id_String"/>
+    <variables name="row3.sub_cont" value="null" talendType="id_String"/>
+    <variables name="row4.id" value="0" talendType="id_Long"/>
+    <variables name="row4.version" value="0" talendType="id_Long"/>
+    <variables name="row4.description" value="null" talendType="id_String"/>
+    <variables name="row4.short_code" value="null" talendType="id_String"/>
+    <variables name="row4.title" value="null" talendType="id_String"/>
+    <variables name="row5.Num" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row5.Sample" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Study" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.LabSample" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.LowTypability" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.PcaOutlier" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.IsDuplicate" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.ManualExlusion" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Exclude" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Fws" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.UsedInSnpDiscovery" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Location" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Year" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Region" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.KhCluster" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.SubCont" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Old_Fws" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Site" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.SiteCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.SiteInfoSource" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row5.Notes" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Num" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row7.Sample" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Study" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Country" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.LabSample" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.LowTypability" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.PcaOutlier" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.IsDuplicate" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.ManualExlusion" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Exclude" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Fws" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.UsedInSnpDiscovery" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Location" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Year" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Region" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.KhCluster" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.SubCont" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Old_Fws" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Site" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.SiteCode" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.SiteInfoSource" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row7.Notes" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Num_T" value="null" talendType="id_Integer" nullable="true"/>
+    <variables name="row2.Sample_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Study_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Country_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.LabSample_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.LowTypability_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.PcaOutlier_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.IsDuplicate_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.ManualExlusion_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Exclude_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Fws_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.UsedInSnpDiscovery_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Location_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Year_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Region_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.KhCluster_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.SubCont_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Old_Fws_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Site_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.SiteInfoSource_T" value="null" talendType="id_String" nullable="true"/>
+    <variables name="row2.Notes_T" value="null" talendType="id_String" nullable="true"/>
   </expression:EMFExpression>
 </xmi:XMI>
